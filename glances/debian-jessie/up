@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+cd $(dirname $(readlink -f $0))
+
+docker-compose up --build -d # build img, create/start container in background

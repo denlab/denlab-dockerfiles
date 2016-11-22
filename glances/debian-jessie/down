@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+cd $(dirname $(readlink -f $0))
+
+docker-compose kill
+docker-compose down # stop and rm containers and networks
+
