@@ -1,0 +1,12 @@
+version: '2'
+services:
+  front:
+    build: front
+    links:
+      - db
+  back:
+    build: back
+    links:
+      - db
+  db:
+    build: db
